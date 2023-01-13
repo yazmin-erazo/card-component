@@ -1,3 +1,4 @@
+/* Variables for the colors used in the layout */
 :root {
     --main-bg-color: #F2EAE2;
     --aurometal-saurus:#6C7289;
@@ -16,7 +17,6 @@
     padding: 0;
 }
 
-
 body {
     align-items: center;
     background-color: var(--main-bg-color);
@@ -27,10 +27,13 @@ body {
     width: 100%;
 }
 
+/* Styles for the main container */
 main {
+    display: contents;
     width: 100%;
 }
 
+/* Styles for the product card */
 .card {
     background-color: var(--white);
     border-radius: 10px;
@@ -40,15 +43,53 @@ main {
     width:343px;
 }
 
+/* Styles for the left container of the card */
 .container-left{
-    background-image: url(images/image-product-desktop.jpg);
+    background-image: url(./images/image-product-desktop.jpg);
     background-position: center;
     background-size: cover;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     width: 50%;
+    /* position: relative; */
 }
 
+/* ----------- Overlay in progress ------------- */
+
+/* .overlay {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.overlay a {
+    color: #fff;
+    text-decoration: none;
+    }
+    
+.overlay img {
+    height: 40px;
+    width: 40px;
+    }
+    
+.container-left:hover .overlay {
+    opacity: 1;
+    } */
+
+/* ------------------------ */
+    
+
+/* Styles for the right container of the card */
 .container-right {
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
@@ -59,6 +100,7 @@ main {
     width:50%;
 }
 
+
 .category{
     color: var(--aurometal-saurus);
     font-family: 'Montserrat', sans-serif;
@@ -68,6 +110,7 @@ main {
     text-transform: uppercase;
 }
 
+/* Card title */
 .title {
     color:var(--gunmetal);
     font-family: 'Fraunces', serif;
@@ -77,6 +120,7 @@ main {
     line-height: 32px;
 }
 
+/* Product description */
 .info{
     color: var(--aurometal-saurus);
     font-family: 'Montserrat', sans-serif;
@@ -85,6 +129,7 @@ main {
     line-height: 23px;
 }
 
+/* Styles for the price section */
 .prices {
     align-items: center;
     display: flex;
@@ -107,6 +152,7 @@ main {
     text-decoration: line-through;
 }
 
+/* "Add to cart" button */
 .button {
     align-items: center;
     background-color: var(--deep-aquamarine);
@@ -124,50 +170,37 @@ main {
     width: 100%;
 }
 
+/* Hover of the "Add to cart" button */
 .button:hover {
     background-color: var(--hover-deep-aquamarine);
 }
 
+/* Icon inside the button */
 .button img {
     margin-right: 12px;
 }
 
-.attribution { 
-    font-family: 'Montserrat', sans-serif; 
-    font-size: 11px; 
-    text-align: center;
-}
-
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
-}
-
 /* ---------- MEDIA QUERIES --------- */
 
-@media only screen and (min-width:641px) and (max-width:768px){
-    .card{
-        max-width: 600px;
+@media (max-width: 600px){
+    body{
+        height: 100%;
     }
-}
-
-@media only screen and (max-width:640px) {
-
     .card{
-        border-radius: 10px;
-        display: flex;
         flex-direction: column;
         min-width: auto;
         width: 90%;
+        margin: 5% 0;
     }
-
-    .box-left {
-        background-image: url(/images/image-product-mobile.jpg);
+   
+    .container-left {
+        background-image: url(./images/image-product-mobile.jpg);
         border-radius: 10px 10px 0 0;
         height: 350px;
         width: 100%;
     }
 
-    .box-right {
+    .container-right {
         border-radius: 0 0 10px 10px;
         padding: 25px;
         row-gap: 12px;
@@ -193,6 +226,6 @@ main {
     }
 
     .button{
-        margin: 10px;
+        margin: 10px 0;
     }
 }
