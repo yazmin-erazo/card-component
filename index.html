@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="This is an example of HTML code for a 'card' containing information about a perfume. Challenge taken from Frontend mentor">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
@@ -15,40 +17,36 @@
     rel="stylesheet">
 
   <title>Frontend Mentor | Product preview card component</title>
-
 </head>
 
 <body>
-
   <main>
-
-    <div class="card">
-      <div class="container-left"></div>
+    <!-- main container for the card -->
+    <section class="card">
+      <div class="container-left">
+        <div class="overlay"></div>
+      </div>
       <div class="container-right">
-        <p class="category">Perfume</p>
-        <h1 class="title">Gabrielle Essence Eau De Parfum</h1>
+        <label class="category" for="product-category">Perfume</label>
+        <h1 class="title" id="product-name">Gabrielle Essence Eau De Parfum</h1>
         <p class="info">A floral, solar and voluptuous interpretation composed by Olivier Polge,
           Perfumer-Creator for the House of CHANEL.</p>
 
         <div class="prices">
-          <p class="price-update">$149.99</p>
-          <p class="price-previous">$169.99</p>
+          <!-- current price of the product -->
+          <label class="price-update" for="current-price">$149.99</label>
+          <!-- previous price of the product -->
+          <label class="price-previous" for="previous-price">$169.99</label>
         </div>
 
-        <button class="button">
-          <img src="/images/icon-cart.svg" alt="Icon shopping cart">
+        <!-- button to add the product to the cart -->
+        <button class="button" aria-label="add to cart" title="Add to Cart">
+          <img src="./images/icon-cart.svg" alt="Icon shopping cart">
           Add to Cart
         </button>
-
       </div>
-    </div>
-
+    </section>
   </main>
-
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/yazmin-erazo">Yazmin Erazo</a>.
-  </div> -->
 
 </body>
 
